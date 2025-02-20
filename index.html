@@ -1,0 +1,121 @@
+﻿<html>
+  <head>
+    <link rel="manifest" href="manifest.json" />
+    <script src="app.js"></script>
+    <style>
+      #gameReady, #gameOver, #gameClear {
+        position: absolute;
+      }
+
+      #gameReady {
+        top        : 160px;
+        left       : 30px;
+        width      : 200px;
+        height     : 180px;
+        font-size  : 24px;
+        z-index    : 1;
+        text-align : center;
+        line-height: 180px;
+        background-color : #4444FF;
+        animation: fade-in 1.5s;
+      }
+
+      #gameOver {
+        top        : 160px;
+        left       : 30px;
+        width      : 200px;
+        height     : 180px;
+        font-size  : 24px;
+        z-index    : 1;
+        text-align : center;
+        line-height: 180px;
+        background-color : #FF2222;
+        opacity    : 0.7;
+      }
+
+      #gameClear {
+        top        : 160px;
+        left       : 30px;
+        width      : 200px;
+        height     : 180px;
+        font-size  : 24px;
+        z-index    : 1;
+        text-align : center;
+        line-height: 180px;
+        background-color : #55FF22;
+        opacity    : 0.7;
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade-out {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      #mainTable {
+        width :240px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        font-size  : 50px;
+      }
+
+      td {
+        width :80px;
+      }
+
+      #bom1, #bom2, #bom3, #bom4, #bom5, #bom6, #bom7, #bom8 {
+        position  : absolute;
+        animation : fade-out 0.3s;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Prime number is not breakable</h1>
+    <p>click only Composite numbers</p>
+
+    <button id="startbutton" onclick="onButtonClick()">game start</button>
+    <div id="gameReady">ready</div>
+    <div id="gameOver">game over</div>
+    <div id="gameClear">clear!!</div>
+    <table id="mainTable" border="1">
+      <tr>
+        <td><span id="num1" onclick="onClick1(event)"></span></td>
+        <td><span id="num2" onclick="onClick2(event)"></span></td>
+        <td><span id="num3" onclick="onClick3(event)"></span></td>
+      </tr>
+      <tr>
+        <td><span id="num4" onclick="onClick4(event)"></span></td>
+        <td><span id="num5" onclick="onClick5(event)"></span></td>
+        <td><span id="num6" onclick="onClick6(event)"></span></td>
+      </tr>
+      <tr>
+        <td><span id="num7" onclick="onClick7(event)"></span></td>
+        <td><span id="num8" onclick="onClick8(event)"></span></td>
+        <td><span id="num9" onclick="onClick9(event)"></span></td>
+      </tr>
+    </table>
+    <div id="counter"></div>
+    <div id="bom1"></div>
+    <div id="bom2"></div>
+    <div id="bom3"></div>
+    <div id="bom4"></div>
+    <div id="bom5"></div>
+    <div id="bom6"></div>
+    <div id="bom7"></div>
+    <div id="bom8"></div>
+  </body>
+</html>
+
