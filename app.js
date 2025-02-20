@@ -127,9 +127,9 @@ function checkPrime(n) {
 }
 
 // 戻り値
-// 1～30のランダムな整数
+// 2～31のランダムな整数
 function makeNumber() {
-  return Math.floor(Math.random() * 30 + 1);
+  return Math.floor(Math.random() * 30 + 2);
 }
 
 function onClick (x, y, num) {
